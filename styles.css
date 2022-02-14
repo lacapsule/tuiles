@@ -1,4 +1,4 @@
-@import url(https://github.com/lacapsule/V3/blob/main/css/variables.css);
+@import url(https://github.com/lacapsule/V3/css/variables.css);
 body {
     display: var(--fl);
     position: var(--rel);

@@ -1,0 +1,171 @@
+@import url(V3/css/variables.css);
+body {
+    display: var(--fl);
+    position: var(--rel);
+    flex-flow: var(--mob);
+    align-items: var(--cen);
+    justify-content: var(--sa);
+    margin: var(--res);
+    padding: var(--res);
+    width: var(--L);
+    height: var(--a);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: var(--blue);
+    overflow-X: var(--hi);
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: var(--no);
+}
+#formation {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--sa);
+    justify-content: var(--sa);
+    width: var(--foo);
+    height: var(--icone);
+}
+nav {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--cen);
+
+}
+.nav {
+    width: var(--demi);
+    height: var(--bg);
+    text-decoration: none;
+    text-align: var(--cen);
+    font-size: var(--icone);
+    line-height: var(--bg);
+    font-weight: var(--b);
+    font-family: var(--pol);
+    text-shadow: var(--soustexte);
+    color: var(--texte);
+    background-color: var(--caps);
+}
+.nav:hover {
+    height: var(--bg-lab);
+    line-height: var(--bg-lab);
+    filter: invert(2);
+    filter: contrast(2);
+    border-radius: 0 0 50px 50px;
+    transition: 0.2s ease-in-out;
+}
+main {
+    display: var(--fl);
+    position: var(--rel);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--sa);
+    top: var(--trucs);
+    width: var(--L);
+    height: var(--L);
+}
+#niveau {
+    display: var(--fl);
+    flex-flow: var(--mob);
+    align-items: var(--sa);
+    justify-content: var(--cen);
+    width: var(--demi);
+    height: var(--L);
+    background-color: transparent;
+    z-index: 0;
+}
+.theme {
+    display: var(--bl);
+    position: var(--rel);
+    width: var(--cont-h);
+    height: var(--btn);
+    margin-left: var(--text);
+    margin-top: var(--text);
+    margin-right: var(--text);
+    margin-bottom: var(--text);
+    background-color: transparent;
+    perspective: 1000px;
+    z-index: 0;
+}
+.theme-interieur {
+    position: var(--rel);
+    width: var(--L);
+    height: var(--L);
+    transition: transform 1.3s ease-in-out;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+.theme:hover:nth-child(odd) .theme-interieur {
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+.theme:hover:nth-child(even) .theme-interieur {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+.theme:active {
+    filter: contrast(2);
+    transition: 0.6s ease;
+    z-index: 2;
+}
+.theme-recto, .theme-verso  {
+    position: var(--abs);
+    width: var(--L);
+    height: var(--L);
+    box-shadow: var(--verso);
+    -webkit-backface-visibility: var(--hi);
+    backface-visibility: var(--hi);
+}
+
+.theme-recto {
+    width: var(--L);
+    height: var(--L);
+    color: var(--texte);
+    text-align: var(--cen);
+    font-size: var(--icone);
+    line-height: var(--home);
+    font-weight: var(--b);
+    font-family: var(--pol);
+    text-shadow: var(--soustexte);
+    background-color: var(--bg-pages);
+    z-index: 1;
+}
+.theme-verso {
+    width: var(--L);
+    height: var(--L);
+    color: var(--texte);
+    text-align: var(--cen);
+    font-size: var(--icone);
+    line-height: var(--home);
+    font-weight: var(--b);
+    font-family: var(--pol);
+    text-shadow: var(--soustexte);
+    background-color: var(--caps);
+    transform: rotateY(180deg);
+    z-index: 3;
+}
+.theme-verso:nth-child(odd) {
+    box-shadow: var(--recto);
+}
+.theme-verso:nth-child(even) {
+    box-shadow: var(--verso);
+}
+
+@media screen and (max-width: 920px) {
+    body {
+    width: var(--cont-w);
+    }
+    .theme-recto {
+    font-size: var(--bot);
+    line-height: var(--btn);
+    font-weight: var(--bold);
+    font-family: var(--pol);
+    text-shadow: var(--soustexte);
+    }
+    .theme-verso {
+    font-size: var(--bot);
+    line-height: var(--btn);
+    font-weight: var(--bold);
+    font-family: var(--pol);
+    text-shadow: var(--soustexte);
+    }
+}
